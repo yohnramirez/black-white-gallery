@@ -1,0 +1,92 @@
+$black: #333333;
+$white: #FFFFFF;
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $white;
+}
+
+.hero{
+    height: 100vh;
+    overflow: hidden;
+    background: $black;  
+    background: linear-gradient(to right, hsla(0, 0%, 26%, 0.342), $black);
+    background: linear-gradient(to right, hsla(0, 0%, 26%, 0.342), $black), url(https://images.pexels.com/photos/3495071/pexels-photo-3495071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    nav span{
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+    .carousel img{
+        object-fit: cover;
+    }
+    .phrase{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        color: $white;
+        width: 100%;
+    }
+}
+
+.section{
+    width: auto;
+    height: auto;
+    .section-gallery{
+        margin: 0 auto;
+        padding-top: 30px;
+        .grid-item{
+            margin-bottom: 20px;
+            background-color: $black;
+            opacity: 1;
+            object-fit: cover;
+            transition: opacity .8s ease;
+            &:hover{
+                cursor: zoom-in;
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.footer{
+    nav span{
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+    p{
+        color: $white;
+    }
+    img{
+        width: 30px;
+        filter: invert(100%);
+    }
+}
+
+@media screen and (max-width:430px){
+    .phrase{
+        font-size: 20px;
+    }
+    .section-gallery{
+        .grid-item{
+            width: 380px;
+        }
+    }
+}
+
+@media screen and (max-width:412px){
+    .section-gallery{
+        position: relative;
+        right: 70px;
+        .grid-item{
+            width: 340px;
+            margin-right: 100px;
+        }
+    }
+}
