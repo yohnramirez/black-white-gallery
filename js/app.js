@@ -24,7 +24,7 @@ window.onload = () => {
 }
 
 imagesPaths.forEach( e => {
-    var imageDirectory = '../images/' + e + '/';
+    var imageDirectory = 'images/' + e + '/';
 
     // Loop for print all images and apply the lightbox effect
     for(var j = 0; j < numberImages.length; j++){
